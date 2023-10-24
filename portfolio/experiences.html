@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work Experience</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .color-1 { background-color: #38322C; }
+        .color-2 { background-color: #516067; }
+        .color-3 { background-color: #C38D4F; }
+        .color-4 { background-color: #90b084; }
+        .color-5 { background-color: #D8CFC0; }
+
+        .text-color-1 { color: #38322C; }
+        .text-color-2 { color: #516067; }
+        .text-color-3 { color: #C38D4F; }
+        .text-color-4 { color: #A7A443; }
+        .text-color-5 { color: #D8CFC0; }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: #f5f5f5;
+            padding-left: 16rem; /* Add this line */
+
+        }
+
+        .header {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-align: left;
+            margin-left: 6rem;    /* Position it to the right of the sidebar */
+            margin-top: 2rem;   
+            color: #38322C;
+        }
+
+        .timeline {
+            position: relative;
+            margin-left: 100px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 5px;
+            background: #516067; /* using .color-2 */
+        }
+
+        .timeline-entry {
+            position: relative;
+            margin-bottom: 60px;
+            padding-left: 30px;
+            cursor: pointer;
+        }
+
+        .timeline-entry::before {
+            content: '';
+            position: absolute;
+            left: -18px;
+            width: 16px;
+            height: 16px;
+            background: #516067; /* using .color-2 */
+            border-radius: 50%;
+            top: 5px;
+        }
+
+        .timeline-entry:hover {
+            background-color: #eae5db; /* Changed hover color to blue */
+            left: 10px;
+        }
+
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #38322C; /* using .text-color-1 */
+        }
+
+        .location, .duration {
+            color: #516067; /* using .text-color-2 */
+            margin-bottom: 10px;
+        }
+
+        .description {
+            font-size: 16px;
+            margin-bottom: 5px;
+            display: none;
+            color: #38322C; /* using .text-color-3 */
+        }
+        .subtext {
+            font-size: 14px;
+            color: #38322C; /* This gives it a light gray color, but you can adjust it to your liking */
+            margin-left: 6rem; /* This will align it with the header, adjust accordingly */
+            margin-bottom: 20px; /* This adds some space before the next content */
+        }
+
+
+    </style>
+</head>
+
+<body class="color-5">
+
+    <div class="header">Work Experience</div>
+    <p class="subtext">Below is a summary of my past work experience. Hover over and click to toggle descriptions!</p>
+
+
+
+    <!-- Sidebar -->
+    <div class="fixed top-0 left-0 h-screen w-64 color-1 p-5 sidebar">
+        <h1 class="text-color-5 text-3xl mb-4 cursor-pointer">Shafial Zaman</h1>
+        <nav class="space-y-2">
+            <a href="index.html" class="block px-3 py-2 text-color-5 hover:bg-color-3 hover:text-color-1">Home</a>
+            <a href="about.html" class="block px-3 py-2 text-color-5 hover:bg-color-3 hover:text-color-1">About Me</a>
+            <a href="experiences.html" class="block px-3 py-2 text-color-5 hover:bg-color-3 hover:text-color-1">Experiences</a>
+            <a href="projects.html" class="block px-3 py-2 text-color-5 hover:bg-color-3 hover:text-color-1">Projects</a>
+            <a href="contact.html" class="block px-3 py-2 text-color-5 hover:bg-color-3 hover:text-color-1">Contact Me</a>
+        </nav>
+    </div>
+
+    <div class="timeline">
+        <!-- UC Berkeley College of Engineering -->
+        <div class="timeline-entry transition-all duration-200 rounded" onclick="toggleDescription(this)">
+            <div class="title">UC Berkeley College of Engineering | Machine Learning Research Intern</div>
+            <div class="location">Berkeley, CA</div>
+            <div class="duration">September 2022 - Present</div>
+            <div class="description">
+                • Developed novel Message-Passing Neural Network architectures for semiconductor heterostructure property prediction with 97% accuracy.<br>
+                • Optimized deep learning quantum chemistry algorithms for large-scale anisotropic crystalline and amorphous material simulation using Python.<br>
+                • Implemented backpropagation and linear regression algorithms to train high-dimensional energy surfaces 20% faster using SchNet architecture.
+            </div>
+        </div>
+
+        <!-- Socialtrait -->
+        <div class="timeline-entry transition-all duration-200 rounded" onclick="toggleDescription(this)">
+            <div class="title">Socialtrait | Software Engineer Intern</div>
+            <div class="location">San Francisco, CA</div>
+            <div class="duration">May 2023 - August 2023</div>
+            <div class="description">
+                • Designed context-based memory system and enhanced reinforcement learning framework integrating attention mechanisms using Python.<br>
+                • Integrated third-party APIs in JavaScript such as payment gateways and email services, expanding company application functionalities.<br>
+                • Researched and implemented generative agent strategies with transformer reinforcement learning and Deep-Q Networks, leveraging <br>techniques such as cognitive mirroring and memory consolidation to increase product agent behavior and decision-making efficacy by 30%.
+            </div>
+        </div>
+
+        <!-- Adobe -->
+        <div class="timeline-entry transition-all duration-200 rounded" onclick="toggleDescription(this)">
+            <div class="title">Adobe | Project Manager (Contract)</div>
+            <div class="location">San Francisco, CA</div>
+            <div class="duration">August 2023 - Present</div>
+            <div class="description">
+                • Oversaw strategic redesign of Adobe Creative Cloud's onboarding process, increasing educational outreach student conversions by 15%.<br>
+                • Conducted customer experience focus groups, integrating feedback to design UI/UX enhancements for Adobe's student-centric platform.<br>
+                • Utilized machine learning techniques in Python, such as clustering and decision trees, for refined user segmentation via website analytics data.
+            </div>
+        </div>
+
+        <!-- Autodesk -->
+        <div class="timeline-entry transition-all duration-200 rounded" onclick="toggleDescription(this)">
+            <div class="title">Autodesk | Technical Project Manager (Contract)</div>
+            <div class="location">San Francisco, CA</div>
+            <div class="duration">August 2023 - Present</div>
+            <div class="description">
+                • Partnered with Autodesk Research to target innovative collaborations across the AI, robotics, computer vision, and computer modeling sectors.<br>
+                • Consulted directly with potential teams, mapping current market trends and future forecasts to pinpoint trailblazing engagements.<br>
+                • Ensured timely submission of insight-driven presentations, emphasizing market revelations and strategic partner recommendations.
+            </div>
+        </div>
+
+        <!-- Socialtrait -->
+        <div class="timeline-entry transition-all duration-200 rounded" onclick="toggleDescription(this)">
+            <div class="title">Socialtrait | Technical Program Manager Intern</div>
+            <div class="location">San Francisco, CA</div>
+            <div class="duration">January 2023 - May 2023</div>
+            <div class="description">
+                • Improved multi-agent reinforcement learning framework for social media platforms using Python GAN models, reducing query times by 15%.<br>
+                • Managed portfolio of 10 AI, systems design, and data analysis projects, guiding each engagement from conceptualization to launch.<br>
+                • Reviewed periodic progress reports, adjusted task priorities, and planned milestone deliverables ensuring alignment with SDLC.
+            </div>
+        </div>
+
+        <!-- Microsoft -->
+        <div class="timeline-entry transition-all duration-200 rounded" onclick="toggleDescription(this)">
+            <div class="title">Microsoft | Strategy Consultant (Contract)</div>
+            <div class="location">San Francisco, CA</div>
+            <div class="duration">January 2023 - May 2023</div>
+            <div class="description">
+                • Forecasted development positioning for Microsoft Loop relative to various competitors using market research to drive product growth.<br>
+                • Devised social media marketing strategy in order to enhance brand visibility and increase customer acquisition channel traffic by 25%.
+            </div>
+        </div>
+
+        <!-- NASA -->
+        <div class="timeline-entry transition-all duration-200 rounded" onclick="toggleDescription(this)">
+            <div class="title">NASA | Project Manager, Micro-g NExT Competition (Finals)</div>
+            <div class="location">Los Angeles, CA</div>
+            <div class="duration">September 2021 - July 2022</div>
+            <div class="description">
+                • Led college team for NASA Artemis program competition, using Inventor to design, build, and test prototypes of a lunar calibration marker.<br>
+                • Directed design and educational outreach programs in writing final proposal and prototyping device, sourcing materials from McMaster Carr.<br>
+                • Advanced to the final testing phase in NASA’s Neutral Buoyancy Lab, engaging directly with NASA astronauts and faculty.
+            </div>
+        </div>
+
+        <!-- Senga Engineering -->
+        <div class="timeline-entry transition-all duration-200 rounded" onclick="toggleDescription(this)">
+            <div class="title">Senga Engineering | Mechanical Engineering Intern</div>
+            <div class="location">Santa Ana, CA</div>
+            <div class="duration">August 2021 - December 2021</div>
+            <div class="description">
+                • Enhanced material selection of components to machine manufacture semiconductors and components for NASA, Boeing, and Blue Origin.<br>
+                • Engineered 3-D design configurations using SolidWorks to coordinate over 45 computer numerical control machines.<br>
+                • Integrated PC-DMIS metrology software to run Hexagon coordinate measurement machines, increasing quarterly production success to 98%.
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+       
+        function toggleDescription(element) {
+            const description = element.querySelector('.description');
+            if (description.style.display === 'none' || description.style.display === '') {
+                description.style.display = 'block';
+            } else {
+                description.style.display = 'none';
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

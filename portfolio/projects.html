@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .color-1 { background-color: #38322C; }
+        .color-2 { background-color: #516067; }
+        .color-3 { background-color: #C38D4F; }
+        .color-4 { background-color: #90b084; }
+        .color-5 { background-color: #D8CFC0; }
+
+        .text-color-1 { color: #38322C; }
+        .text-color-2 { color: #516067; }
+        .text-color-3 { color: #C38D4F; }
+        .text-color-4 { color: #A7A443; }
+        .text-color-5 { color: #D8CFC0; }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: #f5f5f5;
+            padding-left: 16rem; /* Add this line */
+
+        }
+
+        .header {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-align: left;
+            margin-left: 6rem;    /* Position it to the right of the sidebar */
+            margin-top: 2rem;   
+            color: #38322C;
+        }
+
+        .timeline {
+            position: relative;
+            margin-left: 100px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 5px;
+            background: #516067; /* using .color-2 */
+        }
+
+        .timeline-entry {
+            position: relative;
+            margin-bottom: 60px;
+            padding-left: 30px;
+            cursor: pointer;
+        }
+
+        .timeline-entry::before {
+            content: '';
+            position: absolute;
+            left: -18px;
+            width: 16px;
+            height: 16px;
+            background: #516067; /* using .color-2 */
+            border-radius: 50%;
+            top: 5px;
+        }
+
+        .timeline-entry:hover {
+            background-color: #eae5db; /* Changed hover color to blue */
+            left: 10px;
+        }
+
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #38322C; /* using .text-color-1 */
+        }
+
+        .location, .duration {
+            color: #516067; /* using .text-color-2 */
+            margin-bottom: 10px;
+        }
+
+        .description {
+            font-size: 16px;
+            margin-bottom: 5px;
+            display: none;
+            color: #38322C; /* using .text-color-3 */
+        }
+        .project-image {
+            width: 200px;   /* You can adjust the width as needed */
+            height: 200px;
+            object-fit: cover; /* Ensures image content is resized to fit the container while maintaining aspect ratio */
+            border-radius: 4px; /* Optional: Add some rounding to the image */
+        }
+        .subtext {
+            font-size: 14px;
+            color: #38322C; /* This gives it a light gray color, but you can adjust it to your liking */
+            margin-left: 6rem; /* This will align it with the header, adjust accordingly */
+            margin-bottom: 20px; /* This adds some space before the next content */
+        }
+
+    </style>
+</head>
+
+<body class="color-5">
+
+    <!-- Sidebar -->
+    <div class="fixed top-0 left-0 h-screen w-64 color-1 p-5 sidebar">
+        <h1 class="text-color-5 text-3xl mb-4 cursor-pointer">Shafial Zaman</h1>
+
+        <nav class="space-y-2">
+            <a href="index.html" class="block px-3 py-2 text-color-5 hover:bg-color-3 hover:text-color-1">Home</a>
+            <a href="about.html" class="block px-3 py-2 text-color-5 hover:bg-color-3 hover:text-color-1">About Me</a>
+            <a href="experiences.html" class="block px-3 py-2 text-color-5 hover:bg-color-3 hover:text-color-1">Experiences</a>
+            <a href="projects.html" class="block px-3 py-2 text-color-5 hover:bg-color-3 hover:text-color-1">Projects</a>
+            <a href="contact.html" class="block px-3 py-2 text-color-5 hover:bg-color-3 hover:text-color-1">Contact Me</a>
+        </nav>
+    </div>
+
+    <div class="header mt-50 ml-500 text-color-1 text-4xl">Projects</div>
+    <p class="subtext">Here are a few projects I've worked on. Hover over and click to toggle descriptions!</p>
+
+
+    <div class="timeline">
+<!-- WIY -->>
+        <div class="timeline-entry transition-all duration-200 rounded" onclick="toggleDescription(this)">
+            <div class="title">The World is Yours (Java)</div>
+            <img src="woy.png" alt="Kachow Project Image" class="project-image">
+            <!-- <div class="code">Java</div> -->
+            <div class="description">
+                <br>• Designed and implemented 2D world generator using pseudo-randomness to generate distinct rooms, hallways, walls, sprites, and floors.<br>
+                • Created user interface with menu screen and heads-up display to provide information on tiles and objectives.<br>
+                • Developed deterministic interactive system allowing users to control on-screen avatar to interact with the world, with the ability to<br>
+                save and load game progress using text files.
+            </div>
+        </div>
+
+        <div class="timeline-entry transition-all duration-200 rounded" onclick="toggleDescription(this)">
+            <div class="title">Multi-agent Pacman Search (Python)</div>
+            <img src="pacman.png" alt="Kachow Project Image" class="project-image">
+            <!-- <div class="code">Python</div> -->
+            <div class="description">
+                <br>• Incorporated Pacman Minimax, Alpha-Beta Pruning, and Expectimax search algorithms in Python to perform against probabilistic agents.<br>
+                • Engineered dynamic state evaluation function using heuristic analysis and reduced algorithmic runtime in high-complexity scenarios.
+            </div>
+        </div>
+
+        <!-- Adobe -->
+        <div class="timeline-entry transition-all duration-200 rounded" onclick="toggleDescription(this)">
+            <div class="title">Kachow (C, Python)</div>
+            <img src="kachow.png" alt="Kachow Project Image" class="project-image">
+            <!-- <div class="code">C, Python</div> -->
+            <div class="description">
+                <br>• Implemented and optimized 2D convolutions in C, leveraging Single Instruction Multiple Data operations and OpenMP for parallel processing.<br>
+                • Created Open MPI coordinator for improved workload management, used Python, valgrind, and cgdb to debug and generate custom test cases.
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+       
+        function toggleDescription(element) {
+            const description = element.querySelector('.description');
+            if (description.style.display === 'none' || description.style.display === '') {
+                description.style.display = 'block';
+            } else {
+                description.style.display = 'none';
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

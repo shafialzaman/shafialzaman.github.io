@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shafial Zaman's Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .color-1 { background-color: #38322C; }
+        .color-2 { background-color: #516067; }
+        .color-3 { background-color: #C38D4F; }
+        .color-4 { background-color: #90b084; }
+        .color-5 { background-color: #D8CFC0; }
+
+        .text-color-1 { color: #38322C; }
+        .text-color-2 { color: #516067; }
+        .text-color-3 { color: #C38D4F; }
+        .text-color-4 { color: #A7A443; }
+        .text-color-5 { color: #D8CFC0; }
+        
+        body, h1, h2, p, a {
+            font-family: 'Lato', sans-serif !important;
+        }
+
+        img {
+            max-width: 100%; 
+            height: auto;
+        }
+
+        .btn-download {
+            display: inline-block; /* Changed block to inline-block */
+            padding: 10px 15px;
+            width: 250px;
+            border: 2px solid #38322C;
+            text-align: center;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        
+        .btn-download:hover {
+            background-color: #38322C;
+            color: #D8CFC0;
+        }
+
+        .contact-info {
+            display: flex;
+            align-items: center;  /* This will vertically center align the items */
+            gap: 10px;
+        }
+
+        .social-icons {
+            display: flex;
+            align-items: center;  /* This ensures all logos are at the same vertical position */
+            gap: 10px;  /* Add space between logos */
+        }
+
+        .social-icons a:nth-child(1) img {  /* Targeting the first child (LinkedIn logo) */
+            margin-bottom: 0px;  /* Adjust this value to align the logo properly */
+        }
+
+        .websitepfp {
+            width: [desired-width];  /* Replace [desired-width] with your preferred width, e.g., 100px or 50%. */
+            height: auto;  /* Preserve the aspect ratio */
+        }
+
+   
+
+    </style>
+</head>
+
+<body class="color-5 font-sans">
+<!-- Sidebar -->
+    <div class="fixed top-0 left-0 h-screen w-64 color-1 p-5 sidebar">
+        <h1 class="text-color-5 text-3xl mb-4 cursor-pointer">Shafial Zaman</h1>
+        <nav class="space-y-2">
+            <a href="index.html" class="block px-3 py-2 text-color-5 hover:bg-color-3 hover:text-color-1">Home</a>
+            <a href="about.html" class="block px-3 py-2 text-color-5 hover:bg-color-3 hover:text-color-1">About Me</a>
+            <a href="experiences.html" class="block px-3 py-2 text-color-5 hover:bg-color-3 hover:text-color-1">Experiences</a>
+            <a href="projects.html" class="block px-3 py-2 text-color-5 hover:bg-color-3 hover:text-color-1">Projects</a>
+            <a href="contact.html" class="block px-3 py-2 text-color-5 hover:bg-color-3 hover:text-color-1">Contact Me</a>
+        </nav>
+    </div>
+  
+    <!-- Content Area -->
+    <div class="ml-72 p-10">
+        <h2 class="text-color-1 text-4xl mb-6 animate__animated animate__fadeIn">How’s it going? I’m Shaf.</h2>
+        <p class="text-color-1 text-2xl mb-6 animate__animated animate__fadeIn">I have strong interests in machine learning, battery cell engineering, and product management studying <u>Computer Science and Materials Science & Engineering at UC Berkeley.</u></p>
+        
+        <!-- Contact links with logos and Download Resume -->
+        <div class="contact-info mb-6">
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/shafialzaman/" target="_blank" rel="noopener noreferrer"><img src="linkedin.png" alt="LinkedIn" class="w-8 h-8"></a>
+                <a href="https://github.com/shafialzaman" target="_blank" rel="noopener noreferrer"><img src="github.png" alt="GitHub" class="w-8 h-8"></a>
+                <a href="mailto:shafialzaman@berkeley.edu" target="_blank" rel="noopener noreferrer"><img src="email.png" alt="Email" class="w-8 h-8"></a>
+            </div>
+            <a href="SZResume2023.pdf" download target="_blank" rel="noopener noreferrer" class="btn-download">Download Resume</a>
+        </div>
+        
+        <!-- Picture -->
+        <div>
+            <img src="websitePFP.jpeg" alt="Shafial Zaman" class="w-3/4 h-auto border-4 border-background-color-1 animate__animated animate__fadeIn">
+        </div>
+    </div>
+</body>
+</html>

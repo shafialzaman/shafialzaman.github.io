@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .color-1 {
+            background-color: #38322C;
+        }
+
+        .color-2 {
+            background-color: #516067;
+        }
+
+        .color-3 {
+            background-color: #C38D4F;
+        }
+
+        .color-4 {
+            background-color: #90b084;
+        }
+
+        .color-5 {
+            background-color: #D8CFC0;
+        }
+
+        .text-color-1 {
+            color: #38322C;
+        }
+
+        .text-color-2 {
+            color: #516067;
+        }
+
+        .text-color-3 {
+            color: #C38D4F;
+        }
+
+        .text-color-4 {
+            color: #A7A443;
+        }
+
+        .text-color-5 {
+            color: #D8CFC0;
+        }
+
+        body,
+        h1,
+        h2,
+        p,
+        a {
+            font-family: 'Lato', sans-serif !important;
+        }
+
+        .content {
+            margin-left: 260px; /* Adjusted based on the width of the sidebar (w-64) plus some padding */
+        }
+
+        /* Style for the contact box */
+        .contact-box {
+            padding: 20px;
+            background-color: #f2f2f2;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body class="color-5 text-color-1">
+
+    <div class="container mx-auto p-8">
+
+        
+        <!-- Header -->
+        <div class="fixed top-0 left-0 h-screen w-64 color-1 p-5 sidebar">
+            <h1 class="text-color-5 text-3xl mb-4 cursor-pointer">Shafial Zaman</h1>
+            <nav class="space-y-2">
+                <a href="index.html" class="block px-3 py-2 text-color-5 hover:bg-color-3 hover:text-color-1">Home</a>
+                <a href="about.html" class="block px-3 py-2 text-color-5 hover:bg-color-3 hover:text-color-1">About Me</a>
+                <a href="experiences.html" class="block px-3 py-2 text-color-5 hover:bg-color-3 hover:text-color-1">Experiences</a>
+                <a href="projects.html" class="block px-3 py-2 text-color-5 hover:bg-color-3 hover:text-color-1">Projects</a>
+                <a href="contact.html" class="block px-3 py-2 text-color-5 hover:bg-color-3 hover:text-color-1">Contact Me</a>
+            </nav>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="content">
+            <h2 class="text-color-1 text-4xl mb-6">Contact Me</h2>
+
+            <form>
+                <div class="mb-4">
+                    <label for="name" class="block text-color-1 text-sm font-bold mb-2">Name:</label>
+                    <input type="text" id="name" name="name" class="shadow appearance-none border rounded w-full py-2 px-3 text-color-1" placeholder="Your Name">
+                </div>
+
+                <div class="mb-4">
+                    <label for="email" class="block text-color-1 text-sm font-bold mb-2">Email:</label>
+                    <input type="email" id="email" name="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-color-1" placeholder="Your Email">
+                </div>
+
+                <div class="mb-4">
+                    <label for="inquiry" class="block text-color-1 text-sm font-bold mb-2">Inquiry:</label>
+                    <textarea id="inquiry" name="inquiry" class="shadow appearance-none border rounded w-full py-2 px-3 text-color-1" placeholder="Your Inquiry"></textarea>
+                </div>
+
+                <div class="flex items-center justify-end">
+                    <button type="submit" class="color-2 hover:color-3 text-white font-bold py-2 px-4 rounded">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
